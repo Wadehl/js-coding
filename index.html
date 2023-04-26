@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <input v-model="name" type="text" />
+      姓名: {{name}}
+      <br />
+      <input v-model="more.follow.name" type="text" />
+      Follow: {{more.follow.name}}
+      <br />
+      <input v-model="more.like" type="text" />
+      点赞：{{more.like}}
+    </div>
+    <!-- <script src="./myVue2.js"></script> -->
+    <script src="./myVue2-1.js"></script>
+    <!-- <script src="./vue2-egg.js"></script> -->
+    <!-- <script src="./vue3-proxy.js"></script> -->
+    <script>
+      const vm = new Vue({
+        el: "#app",
+        data: {
+          name: "Kevin",
+          more: {
+            like: 123,
+            follow: {
+              name: "Venki",
+            },
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
